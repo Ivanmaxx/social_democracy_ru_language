@@ -1,4 +1,4 @@
-title: Confronting the Nazis
+title: Противостояние нацистам
 new-page: true
 is-card: true
 view-if: (nsdap_r >= 10 and nazi_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
@@ -6,15 +6,15 @@ on-arrival: confronting_nazis_seen += 1; confronting_nazis_timer = 5; month_acti
 card-image: img/iron_front.png
 tags: party_affairs; antifascism
 
-# Forming the Iron Front
+# Формирование Железного фронта
 
-The Nazis' strength is gaining, as shown by their recent election results and their violent presence in the streets. Their fascism threatens to plunge Germany once again into the abyss.
+Как видно по их результатам на недавних выборах и увеличению насилия с их стороны на улицах, нацисты усиливаются. Их фашизс угрожает вновь погрузить Германию в бездну.
 
-Many in our party are calling for urgent action. The "neorevisionist" faction, led by young socialists like Carlo Mierendorff and Julius Leber, have formed specifically around this cause. But many in all factions of the party are calling for action.
+Многие в нашей партии призывают к немедленным действиям. Фракция "неоревизионистов", во главе с молодыми социалистами вроде Карло Мирендорфа и Юлиуса Лебера, сформировалась как раз вокруг этой проблемы. Но призывают к действиям в партии многие представители всех фракций.
 
-- @not_a_big_deal: The Nazis' moment will pass. Let's not get too hasty.
+- @not_a_big_deal: Опасность нацистов пройдёт. Лучше не горячиться.
 - @economic_crisis
-- @major_crisis: We must do something to confront the Nazis.
+- @major_crisis: Нам необходимо сделать что-то, чтобы противостоять нацистам.
 - @iron_front
 
 

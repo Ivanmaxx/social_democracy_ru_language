@@ -6,13 +6,13 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Социал-демократия: альтернативная история
 
 @start_menu_2
 
-- @start: Start game
-- @election_simulation: Election simulation
-- @credits: Credits
+- @start: Начать игру
+- @election_simulation: Симуляция выборов
+- @credits: Создатели
 - @game_over.achievements
 
 
@@ -46,7 +46,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['левые', 'центр', 'профсоюзы', 'реформисты', 'неоревизионисты'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;

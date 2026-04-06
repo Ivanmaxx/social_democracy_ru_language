@@ -1,4 +1,4 @@
-title: Campaigning
+title: Ведение кампании
 new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
@@ -9,62 +9,62 @@ tags: party_affairs
 
 = Campaigning
 
-Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
+Даже если мы не ведём предвыборную кампанию, партия всегда пытается повысить свою популярность. На ком нам стоит сосредоточить кампанию в ближайшее время?
 
-- @workers: The urban working class, our traditional support base.
-- @new_middle: The "new middle class" of government employees and white-collar workers.
-- @old_middle: The "old middle class" of small independent businessmen and artisans.
-- @rural: Rural workers and small farmers, who have felt neglected by us in the past.
-- @unemployed: The unemployed.
-- @catholics: Catholics, who typically support the Center Party.
-- @root: We either don't want to or cannot campaign right now.
+- @workers: На городском рабочем классе - это наш типичный выбор.
+- @new_middle: На "Новом среднем классе" госслужащих и белых воротничков.
+- @old_middle: На "Старом среднем классе", состоящем из малого бизнеса и ремесленников.
+- @rural: На крестьянах и малых фермерах, чьей поддержкой мы ранее принебрегали.
+- @unemployed: На безработных.
+- @catholics: На котоликах, хотя они обыкновенно поддерживают партию Центра.
+- @root:Сейчас мы не хотим, либо не можем вести кампанию.
 - @easy_discard
 
 @workers
-subtitle: -1 resources
+subtitle: -1 ресурс
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: Недостаточно ресурсов.
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
 
-We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
+Мы активизировали кампанию среди рабочих. [? if unemployed >= 15: Высокие уровни безработицы усложняют нашу кампанию. ?][? if wtb_adopted = 1 : Принятие ВТБ-плана создаёт новый вопрос, засчёт которого мы можем привлечь рабочих. ?]
 
 @new_middle
-subtitle: -1 resources
+subtitle: -1 ресурс
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: Недостаточно ресурсов.
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
 
-We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
+Мы активизировали кампанию среди нового среднего класса. [? if socialism <= 49 and peoples_party == 0: Презирание социализма среди этой группы усложнает нашу кампанию. ?] [? if peoples_party > 0: В качестве народной партии увеличивать поддержку среди среднего класса легче, чем ранее. ?]
 
 @old_middle
-subtitle: -1 resources
+subtitle: -1 ресурс
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: Недостаточно ресурсов.
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
 
-We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
+Мы активизировали кампанию среди старого сраднего класса. [? if nationalism >= 51 and peoples_party == 0: Высокий уровень национализма среди этой группы усложнает нашу кампанию. ?] [? if peoples_party > 0: В качестве народной партии увеличивать поддержку среди среднего класса легче, чем ранееe. ?]
 
 @rural
-subtitle: -1 resources
+subtitle: -1 ресурс
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: Недостаточно ресурсов.
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
 
-We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
+Мы активизировали кампанию среди фермеров. [? if peoples_party == 0: Исторически мы не были популярны среди фермеров, и они нам не доверяют. ?][? if peoples_party > 0: В качестве народной партии увеличивать поддержку среди фермеров легче, чем ранееe. ?][? if rural_policy >= 2 : Благодаря нашей аграрной политике увеличивать поддержку среди фермеров стало легче. ?]
 
 @unemployed
-subtitle: -1 resources
+subtitle: -1 ресурс
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: Недостаточно ресурсов.
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
 
-We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
+Мы активизировали кампанию среди безработных. [? if welfare < 0: Сокращение социальных выплат и нищета усложнают ведение кампании, поскольку мы связаны с правительством, которое ввело эти сокращения, и наша кампания может даже обернуться негативно. ?][? if wtb_adopted = 1 : Принятие ВТБ-плана создаёт новый вопрос, засчёт которого мы можем привлечь безработных. ?]
 
 @catholics
-subtitle: -1 resources
+subtitle: -1 ресурс
 choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
+unavailable-subtitle: Недостаточно ресурсов.
 view-if: peoples_party == 1
 on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
 
-We have increased our campaigning among Catholics.
+Мы активизировали кампанию среди католиков.
