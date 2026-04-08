@@ -8,7 +8,7 @@ tags: party_affairs; antifascism
 
 # Формирование Железного фронта
 
-Как видно по их результатам на недавних выборах и увеличению насилия с их стороны на улицах, нацисты усиливаются. Их фашизс угрожает вновь погрузить Германию в бездну.
+Как видно по их результатам на недавних выборах и увеличению насилия с их стороны на улицах, нацисты усиливаются. Их фашизм угрожает вновь погрузить Германию в бездну.
 
 Многие в нашей партии призывают к немедленным действиям. Фракция "неоревизионистов", во главе с молодыми социалистами вроде Карло Мирендорфа и Юлиуса Лебера, сформировалась как раз вокруг этой проблемы. Но призывают к действиям в партии многие представители всех фракций.
 
@@ -22,10 +22,10 @@ tags: party_affairs; antifascism
 on-arrival: nazi_urgency -= 1; left_dissent += 5; neorevisionist_dissent += 15
 view-if: mierendorff_advisor = 0 and leber_advisor = 0 and schumacher_advisor = 0
 
-The Nazis are just another far-right movement that will die of its own contradictions sooner or later; we do not need to build a specific policy to combat them.
+Нацисты — просто очередное ультраправое движение, которое погибнет рано или поздно в собственных противоречиях. Нам не нужно строить особой политики для борьбы с ними.
 
 @economic_crisis
-title: We must address the economic crisis first.
+title: Нам нужно в первую очередь сосредоточиться на экономическом кризисе.
 view-if: economic_plan == 0 and black_thursday_seen == 1
 go-to: crisis_program
 
@@ -33,24 +33,24 @@ go-to: crisis_program
 view-if: nazi_urgency < 5
 on-arrival: nazi_urgency += 1; neorevisionist_dissent -= 5; neorevisionist_strength += 5
 
-The Nazis are one of the foremost threats to the German republic. However, we are still formulating a strategy to confront them, and still trying to build up consensus within our party for action. Check back on this later.
+Нацисты — одна из главных угроз Германской республике. Тем не менее, мы всё ещё формулируем стратегию противостяния им и всё ещё пытаемся создать консенсус внутри нашей партии для действий. Вернёмся к этому позже.
 
 @iron_front
-title: Form the Iron Front!
-subtitle: The Iron Front consists of the SPD, the trade unions, and the Reichsbanner.
+title: Сформировать Железный фронт!
+subtitle: В Железный фронт входят СДПГ, профсоюзы и Рейхсбаннер.
 view-if: nazi_urgency >= 3 and iron_front_formed == 0
 on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
 achievement: eiserne_front
 
-The Nazi threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the SPD, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.
+Угрозу со стороны нацистов нельзя игнорировать дальше. Нам нужно создать новую организацию для борьбы с ними: Железный фронт, состоящий из СДПГ, федерации профсоюзов ВОНФ и *Рейхсбаннера Шварц-Рот-Гольд*. Мы создали новый символ — Три стрелы, направленные влево-вниз.
 
-What do the three arrows stand for?
+Что означают три стрелы?
 
-- @unity: Unity, Activity, and Discipline.
-- @anti: Opposition to Fascism, Stalinism, and Monarchism.
-- @orgs: The SPD, ADGB, and Reichsbanner.
-- @wtb: Woytinsky, Tarnow, and Baade of the WTB-Plan
-- @all: All of the above.
+- @unity: Единство, действие и дисциплину.
+- @anti: Противостояние фашизму, сталинизму и монархизму.
+- @orgs: СДПГ, ВОНФ и Рейхсбаннер.
+- @wtb: Войтинского, Тарнова, Бааде и их ВТБ-план.
+- @all: Всё из этого.
 
 @unity
 go-to: if_end
@@ -70,4 +70,4 @@ go-to: if_end
 
 @if_end
 
-The Iron Front has given a new energy to our party.
+Железный фронт даёт нашей партии новую энергию.
