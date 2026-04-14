@@ -1,0 +1,3 @@
+out/game.json
+out/html/*.js
+!out/html/game.js

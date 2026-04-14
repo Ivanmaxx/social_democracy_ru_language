@@ -1,4 +1,4 @@
-title: The Economic Crisis
+title: Экономический кризис
 new-page: true
 is-card: true
 view-if: crisis_urgency >= 1 and crisis_program_timer = 0 and economic_plan = 0 and black_thursday_seen == 1
@@ -7,45 +7,45 @@ on-arrival: month_actions += 1; crisis_program_timer = 5
 card-image: img/bankrun.jpg
 tags: party_affairs, govt_affairs
 
-= Addressing the Economic Crisis
+= Борьба с экономическим кризисов
 
-Our party is wracked as to how to deal with the economic crisis. From the centrist faction, Hilferding argues that the economic crisis must be allowed to play out, because it is simply a part of the cyclic nature of capitalism.
+Наша партия не определена в том, как бороться с экономическим кризисом. Как центрист, Гильфердинг считает, что экономическому кризису не стоит противостоять, поскольку он — просто часть циклической природы капитализма.
 
-From labor, the economist Wladimir Woytinsky argues that we must pursue a massive public works program to reduce unemployment and stimulate demand, perhaps including deficit spending. His opponents, like Hilferding, argue that this plan will cause a return to hyper-inflation, and that it would not even help the economy. In addition, according to Hilferding, Woytinsky's strategy is opposed to Marxist principles.
+Со стороны рабочих экономист Владимир Войтинский считает, что нам нужно провести масштабную программу общественных работ, которая, пускай и может создать дефицит, уменьшит безработицу и создаст искусственный спрос. Его оппоненты, включая Гильфердинга, считатют, что этот план вновь создаст гиперинфляцию и не поможет экономике. Кроме того, Гильфердинг считает, что стратегия Войтингского противоречит принципам марксизма.
 
-The so-called WTB plan, after its chief supporters Woytinsky, Tarnow, and Baade, is receiving more attention within the party.
+Назвванный в честь создателей Войтинского, Тарнова и Бааде ВТБ-план получает больше внимание среди членов партии.
 
-However, leftists in the party argue that the WTB plan is merely a bandage over the fundamental flaws of capitalism. They argue that the crisis is an opportunity to end capitalism through massive nationalizations of industry, and finally bring our country to socialism.
+Левое крыло партии же считает, что ВТБ-план — лишь заплатка поверх естественных изъянов капитализма. По их мнению, этот кризис — возможность положить конец капитализму с помощью массовой национализации промышленности и привести нашу страну к социализму.
 
-Meanwhile, moderates and reformists draw up proposals for a limited plan of job creation through public works, funded through taxes, that does not involve deficit spending or large-scale restructuring of the economy. Labor argues that the plan is inadequate in its scale and ambition.
+Тем временем умеренные и реформисты создают ограниченный план создания рабочих мест через общественные работы, который не создаёт дефицит, собирая средства с помощью налогов, и не перестраивает экономику глобально. Фракция рабочих считает, что этот план недостаточно масштабен и амбициозен.
 
-- @support_centrist: Support the Centrist view.
-- @support_labor: Support the Labor view.
-- @support_left: Support the Left view.
-- @support_moderate: Support the Reformist view.
-- @defer: Defer making a decision until we have more information.
+- @support_centrist: Поддержать предложение центристов.
+- @support_labor: Поддержать предложение рабочих.
+- @support_left: Поддержать предложение левых.
+- @support_moderate: Поддержать предложени реформистов.
+- @defer: Не изъявлять конкретного решения пока природа кризиса не будет яснее.
 
 @support_centrist
-subtitle: Let the depression play itself out.
+subtitle: Дать депрессии идти своим ходом.
 on-arrival: center_strength += 5; center_dissent -= 5; labor_dissent += 10; wtb_support -= 1; left_dissent += 10;
 
-Woytinsky and the trade unions vehemently criticize the centrists for their policy. The workers are starving; are we going to callously abandon them and side with bourgeois austerity? On the other hand, the centrists criticize Woytinsky for promising the workers false hope; their position is that nothing can be done to alleviate the depression. They also speak of the fear of another round of hyperinflation that may result from deficit spending.
+Войтинский и профсоюзы резко критикуют центристов за их предложение. Рабочие голодают. Разве мы собираемся бросить их и оставить на произвол буржуазной жёсткой экономии? Сами центристы же критикуют Войтинского за ложные надежды для рабочих: их позиция в том, что депрессию не исправит ничто. При этом они также боятся, что трата бюджета в дефицит может привести к очередной гиперинфляции.
 
-Our policy course is currently that nothing can be done to alleviate the depression.
+На данный момент наша политика состоит в том, что с депрессией ничего нельзя поделать.
 
 
 @support_labor
-subtitle: Call for increased public works and fiscal stimulus.
-unavailable-subtitle: The Labor faction is not strong enough.
+subtitle: Призвать к общественным работам и фискальным стимулам.
+unavailable-subtitle: Фракция рабочих недостаточно сильна.
 choose-if: historical_mode == 0 or (labor_strength >= left_strength and labor_strength >= center_strength and labor_strength >= reformist_strength)
 on-arrival: center_dissent += 10; left_dissent += 5; labor_strength += 5; wtb_support += 1;
 go-to: plan_adopted if wtb_support >= 3; plan_support if wtb_support < 3
 
 @plan_support
 
-Our support of the WTB plan alienates the orthodox Marxists of the Centrist faction, and faces both opposition and support from a variety of sources across the spectrum. Leftists argue that the plan is flawed because it leaves capitalism intact, while some reformists are cautiously optimistic.
+Наша поддержка ВТБ-плана отдаляет ортодоксальных марксистов и центристов, но получает хоть некоторую поддержку со всех сторон политического спектра. Многие левые выступают против этого плана, ведь он помогает капиталистическим устоям, тогда как реформисты в основном проявляют осторожный оптимизм.
 
-We have not yet convinced the party to formally adopt the plan. More work needs to be done.
+Пока мы не убедили партию официально принять план. Необходимо проделать больше работы.
 
 @plan_adopted
 on-arrival: wtb_adopted = 1; labor_dissent -= 15; reformist_dissent -= 10; labor_strength += 10; center_strength -= 10; center_dissent += 20; left_dissent += 5; economic_plan = 1
