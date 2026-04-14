@@ -1,4 +1,4 @@
-title: Choosing Our Enemies
+title: Выбор наших врагов
 new-page: true
 view-if: year <= 1930 and enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
@@ -7,23 +7,23 @@ is-card: true
 card-image: img/poster_1.png
 tags: party_affairs
 
-= Choosing our enemies
+= Выбор наших врагов
 
-In our media and campaign materials, who should we consider as our main opponents?
+Кого нам стоит считать нашими главными противниками в наших СМИ и предвыборной кампании?
 
-[? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
+[? if enemies != 0 : Ранее, мы считали [+ enemies +] врагами. Стоит ли нам сменить отказаться от этого курса? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
-- @far_right: The far right - the NSDAP and DNVP.
-- @nsdap: The NSDAP alone.
-- @kpd: The KPD.
-- @bourgeois: The bourgeois parties - the Center and DVP.
+- @anti_dem: Антидемократические ультраправые и левые партии — КПГ, НСДАП и НННП.
+- @far_right: Ультраправые — НСДАП и НННП.
+- @nsdap: Только НСДАП.
+- @kpd: КПГ.
+- @bourgeois: Буржуазные партии — Центр и ННП.
 - @easy_discard
 
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Противостояние ультраправым и левым популярно среди всех в нашей партии, кроме левого крыла, которое предпочитает борьбу с буржуазными партиями. Помимо этого, оно может помешать потенциальному примерению с КПГ в будущем.
 
 @far_right
 on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
